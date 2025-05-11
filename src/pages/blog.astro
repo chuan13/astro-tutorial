@@ -1,5 +1,7 @@
 ---
+import '../styles/global.css';
 
+const pageTitle:string = "My Astro Learning Blog";
 ---
 
 <html lang="zh-TW">
@@ -8,21 +10,23 @@
         <link rel="icon" type="image/svg+xml" href="/astro-tutorial/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro Blog</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
         <a href="/astro-tutorial/">Home</a>
         <a href="/astro-tutorial/about/">About</a>
         <a href="/astro-tutorial/blog/">Blog</a>
 
-        <h1>This is a blog page!</h1>
+        <h1>{pageTitle}</h1>
 
         <p>
             寫個中文試試看
         </p>
 
-        <p>
-            仿 about 做出的 blog page
-        </p>
+        <ul>
+            <li><a href="/astro-tutorial/posts/post-1">post-1</a></li>
+            <li><a href="/astro-tutorial/posts/post-2">post-2</a></li>
+            <li><a href="/astro-tutorial/posts/post-3">post-3</a></li>
+        </ul>
     </body>
 </html>
